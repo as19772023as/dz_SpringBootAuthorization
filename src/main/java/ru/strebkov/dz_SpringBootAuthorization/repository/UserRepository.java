@@ -16,6 +16,10 @@ public class UserRepository implements UserRepositoryInterface {
         List<Authorities> authorities = new ArrayList<>();
         if (user.equals("Ana") && password.equals("123")) {
             Collections.addAll(authorities, Authorities.READ, Authorities.WRITE, Authorities.DELETE);
+        } else if (user.equals("Ana") && password.equals("1234")) {
+            Collections.addAll(authorities, Authorities.READ, Authorities.WRITE);
+        } else if (user.equals("Ana") && password.equals("12345")) {
+            Collections.addAll(authorities, Authorities.READ);
         }
         return authorities;
     }
