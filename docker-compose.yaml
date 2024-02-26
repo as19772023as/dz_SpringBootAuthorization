@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  dz_app1:
+    image: 'myapp_dz:1.0'
+    build: ./
+    ports:
+      - 8080:8080
+
+
